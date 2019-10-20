@@ -1,0 +1,48 @@
+entity EOne {
+	one String required unique
+}
+
+entity ETwo {
+	two Integer required
+}
+
+entity EThree {
+	three Instant required
+}
+
+entity EFour {
+	four Blob required
+}
+
+entity EFive {
+     five String required
+}
+
+entity ESix {
+     six String required
+}
+
+
+relationship OneToMany {
+    EOne{eTwoO required} to ETwo{eOne required}
+}
+
+relationship ManyToOne {
+    ETwo{eTwoT} to EOne
+}
+
+relationship OneToOne {
+    EThree to User
+    ESix to User with jpaDerivedIdentifier
+}
+
+relationship ManyToMany {
+    EFour to EFive
+}
+
+service * with serviceImpl
+paginate EOne with infinite-scroll
+paginate ETwo with pager
+paginate EFive with pagination
+
+dto EThree with mapstruct

@@ -1,0 +1,39 @@
+{
+    "name": "ETwo",
+    "fields": [
+        {
+            "fieldName": "two",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "eOne",
+            "otherEntityRelationshipName": "eTwo",
+            "relationshipName": "eTwoT",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "eOne",
+            "otherEntityRelationshipName": "eTwoO",
+            "relationshipValidateRules": "required",
+            "relationshipName": "eOne",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191020152542",
+    "entityTableName": "e_two",
+    "dto": "no",
+    "pagination": "pager",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,35 @@
+{
+    "name": "ESix",
+    "fields": [
+        {
+            "fieldName": "six",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "eSix",
+            "relationshipName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "options": {
+                "useJPADerivedIdentifier": true
+            }
+        }
+    ],
+    "changelogDate": "20191020152546",
+    "entityTableName": "e_six",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
