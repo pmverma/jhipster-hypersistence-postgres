@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity EFour.
+    -->
+    <changeSet id="20191020152544-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="efour_id"
+                                 baseTableName="e_four_e_five"
+                                 constraintName="fk_e_four_e_five_e_four_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="e_four"/>
+
+        <addForeignKeyConstraint baseColumnNames="e_five_id"
+                                 baseTableName="e_four_e_five"
+                                 constraintName="fk_e_four_e_five_e_five_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="e_five"/>
+        
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,32 @@
+{
+    "name": "EOne",
+    "fields": [
+        {
+            "fieldName": "one",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "eTwo",
+            "otherEntityRelationshipName": "eOne",
+            "relationshipValidateRules": "required",
+            "relationshipName": "eTwoO"
+        }
+    ],
+    "changelogDate": "20191020152541",
+    "entityTableName": "e_one",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

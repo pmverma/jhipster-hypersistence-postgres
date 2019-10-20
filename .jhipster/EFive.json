@@ -1,0 +1,32 @@
+{
+    "name": "EFive",
+    "fields": [
+        {
+            "fieldName": "five",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "eFour",
+            "otherEntityRelationshipName": "eFive",
+            "relationshipName": "eFour",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191020152545",
+    "entityTableName": "e_five",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
