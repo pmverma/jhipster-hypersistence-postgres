@@ -27,7 +27,7 @@ public class EThree implements Serializable {
     @Column(name = "three", nullable = false)
     private Instant three;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(unique = true)
     private User user;
 

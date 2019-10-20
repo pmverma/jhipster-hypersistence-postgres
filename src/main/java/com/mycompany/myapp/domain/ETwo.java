@@ -27,11 +27,11 @@ public class ETwo implements Serializable {
     @Column(name = "two", nullable = false)
     private Integer two;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties("eTwos")
     private EOne eTwoT;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @NotNull
     @JsonIgnoreProperties("eTwoOS")
     private EOne eOne;
